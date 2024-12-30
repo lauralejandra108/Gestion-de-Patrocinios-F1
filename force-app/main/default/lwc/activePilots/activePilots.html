@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Contactos Activos">
+        <template if:true={contacts}>
+            <lightning-datatable
+                key-field="id"
+                data={contacts}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            <p class="slds-text-color_error">{error}</p>
+        </template>
+    </lightning-card>
+</template>
